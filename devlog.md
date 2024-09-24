@@ -2,8 +2,8 @@
 * Name: Danielle Bunn
 * [Trello Board] (https://trello.com/b/IlLrULls/danielle-bunn-game-design-final-project)
 * [Proposal]([Bunn_Final Game Proposal.pdf](https://github.com/user-attachments/files/17121769/Bunn_Final.Game.Proposal.pdf)
-)
 * [Other docs](todo)
+* [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
 ### 2024-09-24 - 3 hr: Setup with github and game
 * Made repo
