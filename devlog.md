@@ -1,7 +1,8 @@
 # Fall 2024 - Intro to Game Design @ SUNY New Paltz
 * Name: Danielle Bunn
 * [Trello Board] (https://trello.com/b/IlLrULls/danielle-bunn-game-design-final-project)
-* [Proposal]([Bunn_Final Game Proposal.pdf])
+* [Proposal]([Bunn_Final Game Proposal.pdf](https://github.com/user-attachments/files/17121769/Bunn_Final.Game.Proposal.pdf)
+)
 * [Other docs](todo)
 
 ### 2024-09-23 - 6.5hr: Headline of what work was done like "Got the player character working."
