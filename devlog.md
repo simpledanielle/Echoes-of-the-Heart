@@ -5,13 +5,24 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-10-01 - 3 hr: Fixed sprite issues, need to clean up files
+* Found new sprites that worked better and made movement a little better
+* Started working with collision shapes
+* Files are a little all over the place, need to clean up a little
+* Keep looking at tutorials to move on to next steps like inventory and dialogue
+
+### 2024-09-27 - 3 hr: Tried to start setting up game
+* Looked up free sprites to use as example
+* Started looking up tutorials for specifically top down games
+* Got sprite to move with keyboard arrows
+* Tried to make a simple tile set, sprites are a little off, have to find new ones
+
 ### 2024-09-24 - 3 hr: Setup with github and game
 * Made repo
 * Created devlog
-  topdown character in godot. (two spaces to continue bullet)
-* Item 2 - like "Ran into issue with XYZ, so used ChatGPT to figure it out by doing ABC"
-* Item 3 - like "TODO: I still need to get the projectile working."
-* Item 4 - like "I completed [XYZ](some-link-to-ticket)
+* Did trello board
+* Set up Itch.io
+
 
 ### 2024-09-22 - 1 hr: This is the previous day's devlog. Always put the newest item at the top of the page.
 * Item 1
