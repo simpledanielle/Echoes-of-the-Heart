@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://2tt3m6jbbav8"
+path="res://.godot/imported/Gold2.wav-c97512077909cb02e9a5d4925d8f6673.sample"
+
+[deps]
+
+source_file="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Sounds/Game/Gold2.wav"
+dest_files=["res://.godot/imported/Gold2.wav-c97512077909cb02e9a5d4925d8f6673.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
