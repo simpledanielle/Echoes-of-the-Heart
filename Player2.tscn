@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://c35kov6o8wbaa"]
 
-[ext_resource type="Texture2D" uid="uid://c8jh80qq5rqei" path="res://Assets/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Characters/Cavegirl/SpriteSheet.png" id="1_20led"]
+[ext_resource type="Texture2D" uid="uid://c8jh80qq5rqei" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Characters/Cavegirl/SpriteSheet.png" id="1_20led"]
 
 [sub_resource type="GDScript" id="GDScript_gqfh5"]
 resource_name = "player2"

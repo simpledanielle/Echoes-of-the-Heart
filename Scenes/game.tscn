@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=4 uid="uid://bk6gmspupiar6"]
 
 [ext_resource type="PackedScene" uid="uid://clglvhrm6yfa4" path="res://Scenes/Player2.tscn" id="5_k22nw"]
-[ext_resource type="Texture2D" uid="uid://818v4f3anki7" path="res://Assets 2/Sprites 2/TilesetDungeon.png" id="5_v17uj"]
-[ext_resource type="Texture2D" uid="uid://dnvvxbegh3icg" path="res://Assets 2/Sprites 2/Tileset_SpookyMansion_16x16_FREE.png" id="6_msi0u"]
+[ext_resource type="Texture2D" path="res://Assets 2/Sprites 2/TilesetDungeon.png" id="5_v17uj"]
+[ext_resource type="Texture2D" path="res://Assets 2/Sprites 2/Tileset_SpookyMansion_16x16_FREE.png" id="6_msi0u"]
 [ext_resource type="PackedScene" uid="uid://duxqsipd418sl" path="res://Scenes/npc.tscn" id="8_jedsh"]
-[ext_resource type="Texture2D" uid="uid://bs18shwxi5nef" path="res://Assets 2/Sprites 2/TilesetFloor.png" id="8_ys4h4"]
+[ext_resource type="Texture2D" path="res://Assets 2/Sprites 2/TilesetFloor.png" id="8_ys4h4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aa70k"]
 texture = ExtResource("8_ys4h4")
