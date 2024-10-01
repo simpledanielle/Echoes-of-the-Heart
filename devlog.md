@@ -22,11 +22,3 @@
 * Created devlog
 * Did trello board
 * Set up Itch.io
-
-
-### 2024-09-22 - 1 hr: This is the previous day's devlog. Always put the newest item at the top of the page.
-* Item 1
-* Item 2
-
-  You can learn more about formatting using markdown.
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
