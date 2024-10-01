@@ -6,6 +6,7 @@
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
 ### 2024-10-01 - 3 hr: Fixed sprite issues, need to clean up files
+* Changed default branch to master, and updated commit to github
 * Found new sprites that worked better and made movement a little better
 * Started working with collision shapes
 * Files are a little all over the place, need to clean up a little
