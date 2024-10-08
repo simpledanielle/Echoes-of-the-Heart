@@ -9,6 +9,7 @@
 * Went over and cleaned up files so I know where everything is now
 * Started searching for videos
 * Found an interaction button video I may try (https://www.youtube.com/watch?v=ajCraxGAeYU&ab_channel=DashNothing)
+* Need to fix camera so that it follows the player
 
 ### 2024-10-01 - 3 hr: Fixed sprite issues, need to clean up files
 * Changed default branch to master, and updated commit to github
