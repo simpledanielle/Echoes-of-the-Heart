@@ -5,7 +5,14 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-10-03 - 1 hr: Cleaned up files, look up videos
+* Went over and cleaned up files so I know where everything is now
+* Started searching for videos
+* Found an interaction button video I may try (https://www.youtube.com/watch?v=ajCraxGAeYU&ab_channel=DashNothing)
+* Need to fix camera so that it follows the player
+
 ### 2024-10-01 - 3 hr: Fixed sprite issues, need to clean up files
+* Changed default branch to master, and updated commit to github
 * Found new sprites that worked better and made movement a little better
 * Started working with collision shapes
 * Files are a little all over the place, need to clean up a little
