@@ -5,6 +5,21 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-10-16 - 1 hr 30 min: Worked on Interaction Button
+* Followed this video: (https://www.youtube.com/watch?v=_57alDBagSY&t=21s&ab_channel=Queble)
+* Got button to work!!!!!!!
+
+
+### 2024-10-09 - 35 min: External Playtest with Jesse
+* Looked at this video and tried to follow it:
+* One line of code didn't end up working. Look into it another time
+* Posted my game and worked on In-class playtests
+
+### 2024-10-08 - 3 hr: Looked up interaction button tutorial, In-class playtest
+* Looked at this video and tried to follow it:
+* One line of code didn't end up working. Look into it another time
+* Posted my game and worked on In-class playtests
+
 ### 2024-10-03 - 1 hr: Cleaned up files, look up videos
 * Went over and cleaned up files so I know where everything is now
 * Started searching for videos
