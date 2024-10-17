@@ -7,13 +7,18 @@
 
 ### 2024-10-16 - 1 hr 30 min: Worked on Interaction Button
 * Followed this video: (https://www.youtube.com/watch?v=_57alDBagSY&t=21s&ab_channel=Queble)
-* Got button to work!!!!!!!
+* Got interaction button to work!!!!!!!
+* Next step look for videos to figure out emotion mechanic
+
+### 2024-10-13 - 40 min: External Playtest with Preston
+* Had my cousin test my game
+
+### 2024-10-11 - 20 min: External Playtest with Rita
+* Hung out with my friend and got her to test my game
 
 
 ### 2024-10-09 - 35 min: External Playtest with Jesse
-* Looked at this video and tried to follow it:
-* One line of code didn't end up working. Look into it another time
-* Posted my game and worked on In-class playtests
+* Got my friend to play my game and give feedback
 
 ### 2024-10-08 - 3 hr: Looked up interaction button tutorial, In-class playtest
 * Looked at this video and tried to follow it:
