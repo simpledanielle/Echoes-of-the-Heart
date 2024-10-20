@@ -5,6 +5,38 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-10-20 - 1 hr: Door, Scene Changes, and Github
+* Used ChatGPt to have a code for having specific doors open based on the emotion the player has
+* Also got it to change scenes to the puzzle level if the player has the specific emotion
+* Updated my Github
+
+### 2024-10-19 - 3 hr 30 min: Emotion's Mechanic
+* Tried to find video tutorials, none of them were what I was looking for 
+* Eventually asked ChatGPT. Took a little trial and error but got the code to work
+* Right now there are print statements showing a change in emotions. Two work: CALM, ANGRY
+* Created an item script that changes emotion
+
+
+### 2024-10-16 - 1 hr 30 min: Worked on Interaction Button
+* Followed this video: (https://www.youtube.com/watch?v=_57alDBagSY&t=21s&ab_channel=Queble)
+* Got interaction button to work!!!!!!!
+* Next step look for videos to figure out emotion mechanic
+
+### 2024-10-13 - 40 min: External Playtest with Preston
+* Had my cousin test my game
+
+### 2024-10-11 - 20 min: External Playtest with Rita
+* Hung out with my friend and got her to test my game
+
+
+### 2024-10-09 - 35 min: External Playtest with Jesse
+* Got my friend to play my game and give feedback
+
+### 2024-10-08 - 3 hr: Looked up interaction button tutorial, In-class playtest
+* Looked at this video and tried to follow it:
+* One line of code didn't end up working. Look into it another time
+* Posted my game and worked on In-class playtests
+
 ### 2024-10-03 - 1 hr: Cleaned up files, look up videos
 * Went over and cleaned up files so I know where everything is now
 * Started searching for videos
