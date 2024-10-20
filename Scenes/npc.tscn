@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://duxqsipd418sl"]
+[gd_scene load_steps=4 format=3 uid="uid://duxqsipd418sl"]
 
+[ext_resource type="Script" path="res://Scenes/npc.gd" id="1_37o30"]
 [ext_resource type="Texture2D" uid="uid://brhf2p7sj268" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Characters/Caveman/SpriteSheet.png" id="1_qn85i"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8s471"]
 radius = 8.06226
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_37o30")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_qn85i")

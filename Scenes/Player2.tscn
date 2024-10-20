@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://clglvhrm6yfa4"]
+[gd_scene load_steps=23 format=3 uid="uid://clglvhrm6yfa4"]
 
 [ext_resource type="Texture2D" uid="uid://c8jh80qq5rqei" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Characters/Cavegirl/SpriteSheet.png" id="1_37p16"]
 
@@ -8,11 +8,89 @@ script/source = "extends CharacterBody2D
 
 var speed = 100  # speed in pixels/sec
 
-func _physics_process(delta):
+
+func _physics_process(_delta):
 	var direction = Input.get_vector(\"left\", \"right\", \"up\", \"down\")
 	velocity = direction * speed
 
 	move_and_slide()
+	
+	if Input.is_action_just_pressed(\"interact\"):
+		execute_interaction()
+
+@export var all_interactions = []
+@onready var interactLabel = $\"Interaction Components/InteractLabel\"
+
+
+func _ready():
+	update_interactions()
+
+#Interaction Stuff
+
+func _on_interaction_area_area_entered(area: Area2D) -> void:
+	all_interactions. insert(0, area)
+	update_interactions()
+
+func _on_interaction_area_area_exited(area: Area2D) -> void:
+	all_interactions.erase(area)
+	update_interactions()
+
+
+func update_interactions():
+	if all_interactions:
+		interactLabel.text = all_interactions[0].interact_label
+	else:
+		interactLabel.text = \"\"
+
+
+func execute_interaction():
+	if all_interactions:
+		
+		var cur_interaction = all_interactions[0]
+		match cur_interaction.interact_type:
+			\"print_text\" : print(cur_interaction.interact_value)
+
+
+
+
+#Emotion Stuff
+# In Player.gd or GameManager.gd
+enum Emotion { CALM, ANGRY }  # Define emotions
+var current_emotion = Emotion.CALM  # Default emotion
+var player_in_range = false
+
+# Function to change the current emotion
+func set_emotion(new_emotion):
+		current_emotion = new_emotion
+		print (\"Current emotion: \", current_emotion)  # Update UI
+
+# Example interaction to change emotions
+func interact_with_item(item_type):
+	if item_type == \"angry_item\":
+		set_emotion(Emotion.ANGRY)
+	elif item_type == \"calm_item\":
+		set_emotion(Emotion.CALM)
+
+
+
+# Check for key presses to simulate emotion change
+func _process(delta):
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		set_emotion(Emotion.ANGRY)
+	elif Input.is_action_just_pressed(\"ui_cancel\"):
+		set_emotion(Emotion.CALM)
+
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass
+
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
+	
+	
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxbif"]
@@ -160,7 +238,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kjoax"]
 radius = 7.07107
 
-[node name="Player2" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8fe3n"]
+radius = 15.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = SubResource("GDScript_gqfh5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -172,3 +253,37 @@ frame_progress = 0.415952
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kjoax")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="Interaction Components" type="Node2D" parent="."]
+z_index = 1
+
+[node name="InteractionArea" type="Area2D" parent="Interaction Components"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction Components/InteractionArea"]
+shape = SubResource("CircleShape2D_8fe3n")
+
+[node name="InteractLabel" type="Label" parent="Interaction Components"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -30.0
+offset_right = 32.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.409988, 0.409988)
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Interaction Components/InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="Interaction Components/InteractionArea" to="." method="_on_interaction_area_area_exited"]
