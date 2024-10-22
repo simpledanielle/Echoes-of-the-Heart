@@ -535,4 +535,4 @@ tile_map_data = PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 13, 0, 11, 0, 0, 0, 
 tile_set = SubResource("TileSet_hbesu")
 
 [node name="Player" parent="." instance=ExtResource("2_42n3d")]
-position = Vector2(574, 298)
+position = Vector2(575, 297)

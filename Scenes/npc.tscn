@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://duxqsipd418sl"]
+[gd_scene load_steps=6 format=3 uid="uid://duxqsipd418sl"]
 
 [ext_resource type="Script" path="res://Scenes/npc.gd" id="1_37o30"]
 [ext_resource type="Texture2D" uid="uid://brhf2p7sj268" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Characters/Caveman/SpriteSheet.png" id="1_qn85i"]
+[ext_resource type="PackedScene" uid="uid://um3lkccym1mv" path="res://Scenes/interact_area.tscn" id="3_2g1ik"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8s471"]
 radius = 8.06226
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yww4"]
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource("1_37o30")
@@ -17,3 +20,42 @@ vframes = 7
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_8s471")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_1yww4")
+
+[node name="NPC Dialogue" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 20.0
+offset_bottom = 26.0
+
+[node name="Dialogue" type="Label" parent="NPC Dialogue"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -8.0
+offset_right = 51.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 9
+text = "test"
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="NPC Dialogue"]
+layout_direction = 2
+layout_mode = 0
+offset_left = -31.0
+offset_top = 44.0
+offset_right = -21.0
+offset_bottom = 54.0
+scale = Vector2(0.5, 0.5)
+
+[node name="InteractArea" parent="." instance=ExtResource("3_2g1ik")]
+position = Vector2(0, 5)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_exited"]
