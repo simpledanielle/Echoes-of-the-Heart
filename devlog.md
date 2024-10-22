@@ -5,6 +5,11 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-10-22 - 3 hrs: Dialogue & Itch.io
+* Uploaded new build to itch.io
+* Added dialogue and choices to an NPC
+* Made small adjustments for playtesting
+
 ### 2024-10-20 - 1 hr: Door, Scene Changes, and Github
 * Used ChatGPt to have a code for having specific doors open based on the emotion the player has
 * Also got it to change scenes to the puzzle level if the player has the specific emotion
