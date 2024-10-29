@@ -11,7 +11,7 @@ extends CharacterBody2D
 @export var detection_range: float = 200
 
 var player_in_range = false
-@onready var player =  get_parent().get_node(".")  # Adjust path as needed
+@onready var player =  get_parent().get_node("")  # Adjust path as needed
 @onready var attack_timer = Timer.new()
 
 
@@ -46,7 +46,7 @@ func attack_player():
 	# Check if the player reference is valid
 	if player:
 		# Check if the player has the 'take_damage' method
-		if player.take_damage:
+		if player.has_method("take_damage"):
 			player.take_damage(attack_damage)
 			print("Enemy attacked player! Damage dealt:", attack_damage)
 		else:

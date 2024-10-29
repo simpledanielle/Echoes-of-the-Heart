@@ -76,9 +76,12 @@ func set_emotion(new_emotion):
 func interact_with_item(item_type):
 	if item_type == "angry_item":
 		set_emotion(Emotion.ANGRY)
+		add_emotion_points("angry", 5)
+		print("5 points")
 	elif item_type == "calm_item":
 		set_emotion(Emotion.CALM)
-
+		add_emotion_points("calm", 10)
+		print("10 points")
 
 
 # Check for key presses to simulate emotion change
@@ -142,3 +145,38 @@ func _on_AttackRange_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(attack_damage)
 		print("Enemy hit! Health reduced.")
+
+
+
+#Emotion Points
+
+
+# Emotion point variables
+var calm_points: int = 0
+var angry_points: int = 0
+
+# Function to add points to an emotion
+func add_emotion_points(emotion: String, points: int) -> void:
+	match emotion:
+		"calm":
+			calm_points += points
+			print("Calm points:", calm_points)
+		"angry":
+			angry_points += points
+			print("Angry points:", angry_points)
+
+# Function to subtract points from an emotion
+func subtract_emotion_points(emotion: String, points: int) -> void:
+	match emotion:
+		"calm":
+			calm_points = max(0, calm_points - points)  # Ensure points don't go below 0
+			print("Calm points:", calm_points)
+		"angry":
+			angry_points = max(0, angry_points - points)
+			print("Angry points:", angry_points)
+
+
+# Call this function when the player interacts with an item
+
+func interact(item: Node) -> void:
+	interact_with_item(item)

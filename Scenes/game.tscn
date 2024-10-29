@@ -1082,4 +1082,10 @@ position = Vector2(537, 112)
 [node name="door2" parent="." instance=ExtResource("9_730l6")]
 position = Vector2(417, 27)
 
+[node name="InteractArea" parent="." instance=ExtResource("6_daqm5")]
+position = Vector2(541, 130)
+
+[node name="InteractArea2" parent="." instance=ExtResource("6_daqm5")]
+position = Vector2(583, 133)
+
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
