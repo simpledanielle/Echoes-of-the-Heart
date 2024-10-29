@@ -6,7 +6,7 @@
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
 ### 2024-10-29 - 2 hr 30 min: Enemy movement, updating git & trello
-* Updated 
+* Updated github, trello board tasks, and Itch.io
 * Worked on enemy movement, have most of the code, just need to solve a couple errors
 * 
 
