@@ -1,7 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://clglvhrm6yfa4"]
+[gd_scene load_steps=26 format=3 uid="uid://clglvhrm6yfa4"]
 
 [ext_resource type="Script" path="res://Scripts/Player2.tres.gd" id="1_18vbv"]
 [ext_resource type="Texture2D" uid="uid://c8jh80qq5rqei" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Characters/Cavegirl/SpriteSheet.png" id="1_37p16"]
+[ext_resource type="Texture2D" uid="uid://c6n7qrc7v7wu0" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Ui/LifeBarMiniUnder.png" id="3_oxyy5"]
+[ext_resource type="Texture2D" uid="uid://x6ddw2vf3ch4" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Ui/LifeBarMiniProgress.png" id="4_8ai05"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxbif"]
 atlas = ExtResource("1_37p16")
@@ -151,6 +153,9 @@ radius = 7.07107
 [sub_resource type="CircleShape2D" id="CircleShape2D_8fe3n"]
 radius = 15.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xo58"]
+radius = 14.0357
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_18vbv")
 
@@ -204,5 +209,32 @@ text = "test"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -100.0
+offset_top = -108.0
+offset_right = -60.0
+offset_bottom = -68.0
+
+[node name="healthbar" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 24.0
+offset_right = 12.0
+offset_bottom = 58.0
+scale = Vector2(3.71701, 3.71701)
+value = 100.0
+texture_under = ExtResource("3_oxyy5")
+texture_progress = ExtResource("4_8ai05")
+
+[node name="Attack" type="Node2D" parent="."]
+
+[node name="AttackRange" type="Area2D" parent="Attack"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack/AttackRange"]
+shape = SubResource("CircleShape2D_0xo58")
+
 [connection signal="area_entered" from="Interaction Components/InteractionArea" to="." method="_on_interaction_area_area_entered"]
 [connection signal="area_exited" from="Interaction Components/InteractionArea" to="." method="_on_interaction_area_area_exited"]
+[connection signal="body_entered" from="Attack/AttackRange" to="." method="_on_AttackRange_body_entered"]

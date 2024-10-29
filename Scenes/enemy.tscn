@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwlwgs6tjq60b"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_65f8y"]
+[ext_resource type="Texture2D" uid="uid://b8j5pk7evc8a7" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Monsters/FishRed/Faceset.png" id="2_arhb5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vqx1p"]
+radius = 25.3333
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q0lu"]
+size = Vector2(12, 12)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_65f8y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 3)
+scale = Vector2(0.315789, 0.315789)
+texture = ExtResource("2_arhb5")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(-1.21593e-05, -6.19888e-06)
+shape = SubResource("CircleShape2D_vqx1p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_2q0lu")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 2.0
+offset_top = -18.0
+offset_right = 6.0
+offset_bottom = 9.0
+scale = Vector2(0.472821, 0.472821)
+max_value = 3.0
+value = 3.0
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_AttackRange_body_entered"]
+[connection signal="body_exited" from="Sprite2D/Area2D" to="." method="_on_AttackRange_body_exited"]

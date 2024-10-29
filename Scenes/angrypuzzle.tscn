@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmeqiejj2s2kx"]
+[gd_scene load_steps=6 format=4 uid="uid://bmeqiejj2s2kx"]
 
 [ext_resource type="Texture2D" uid="uid://dnvvxbegh3icg" path="res://Assets/Sprites/Tileset_SpookyMansion_16x16_FREE.png" id="1_d0322"]
 [ext_resource type="PackedScene" uid="uid://clglvhrm6yfa4" path="res://Scenes/Player2.tscn" id="2_42n3d"]
+[ext_resource type="PackedScene" uid="uid://dwlwgs6tjq60b" path="res://Scenes/enemy.tscn" id="3_3gh5y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gh4lk"]
 texture = ExtResource("1_d0322")
@@ -531,8 +532,11 @@ sources/0 = SubResource("TileSetAtlasSource_gh4lk")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(566, 277)
-tile_map_data = PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 13, 0, 11, 0, 0, 0, 0, 0, 255, 255, 0, 0, 13, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 17, 0, 0, 0, 253, 255, 254, 255, 0, 0, 5, 0, 24, 0, 0, 0, 3, 0, 254, 255, 0, 0, 5, 0, 24, 0, 0, 0)
+tile_map_data = PackedByteArray("AAAAAP7/AAANAAsAAAAAAP//AAANAAwAAAAAAAAAAAAEABEAAAD9//7/AAAFABgAAAADAP7/AAAFABgAAAAAAPf/AAAPAAsAAAAAAPj/AAAPAAwAAAA=")
 tile_set = SubResource("TileSet_hbesu")
 
 [node name="Player" parent="." instance=ExtResource("2_42n3d")]
-position = Vector2(575, 297)
+position = Vector2(575, 238)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_3gh5y")]
+position = Vector2(650, 185)

@@ -18,7 +18,12 @@ func _physics_process(_delta):
 
 func _ready():
 	update_interactions()
-
+	update_health_bar()
+	if attack_shape:
+		attack_shape.disabled = true  # Disable collision shape initially
+	else:
+		print("Error: CollisionShape2D not found. Check if it exists under AttackRange.")
+	
 #Interaction Stuff
 
 func _on_interaction_area_area_entered(area: Area2D) -> void:
@@ -82,6 +87,8 @@ func _process(delta):
 		set_emotion(Emotion.ANGRY)
 	elif Input.is_action_just_pressed("ui_cancel"):
 		set_emotion(Emotion.CALM)
+	if Input.is_action_just_pressed("ui_attack"):
+		attack()
 
 
 
@@ -94,3 +101,44 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	pass # Replace with function body.
 	
 	
+
+#health stuff
+var health: int = 100
+@onready var health_bar = $Control/healthbar
+
+
+func take_damage(amount: int):
+	health -= amount
+	update_health_bar()
+	if health <= 0:
+		die()
+		
+		
+func update_health_bar():
+	if health_bar:
+		health_bar.value = health
+
+func die():
+	queue_free()
+
+
+#attack range
+
+@export var attack_damage: int = 1
+@onready var attack_range = $Attack/AttackRange
+@onready var attack_shape: CollisionShape2D = attack_range.get_node("CollisionShape2D")
+
+#Method to attack 
+
+func attack():
+	print("Attack button pressed.")
+	if attack_shape:
+		attack_shape.disabled = false
+		await get_tree().create_timer(0.2).timeout
+		attack_shape.disabled = true
+		print("Attack range disabled")
+
+func _on_AttackRange_body_entered(body):
+	if body.has_method("take_damage"):
+		body.take_damage(attack_damage)
+		print("Enemy hit! Health reduced.")
