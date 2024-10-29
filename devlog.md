@@ -6,9 +6,10 @@
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
 ### 2024-10-29 - 2 hr 30 min: Enemy movement, updating git & trello
-* Updated 
+* Created final door that accepts a code to open. Numbers display for player to see. This is how to beat the demo
+* Updated github, trello board tasks, and Itch.io
 * Worked on enemy movement, have most of the code, just need to solve a couple errors
-* 
+  
 
 ### 2024-10-24 - 1 hr 30 min: Narrative & Enemy planning
 * Created plans for enemy patterns & next steps for polish
