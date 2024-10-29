@@ -5,6 +5,16 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-10-29 - 2 hr 30 min: Enemy movement, updating git & trello
+* Updated 
+* Worked on enemy movement, have most of the code, just need to solve a couple errors
+* 
+
+### 2024-10-24 - 1 hr 30 min: Narrative & Enemy planning
+* Created plans for enemy patterns & next steps for polish
+* Worked on narrative
+* Picked out color palette
+
 ### 2024-10-24 - 1 hr 35 min: Player/enemy health & Attack button
 * Attack button is working!
 * Set up script for player health bar
