@@ -5,6 +5,11 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-10-24 - 1 hr 35 min: Player/enemy health & Attack button
+* Attack button is working!
+* Set up script for player health bar
+* After some time, got enemy health showing
+
 ### 2024-10-22 - 3 hrs: Dialogue & Itch.io
 * Uploaded new build to itch.io
 * Added dialogue and choices to an NPC
