@@ -5,6 +5,12 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+
+### 2024-11-05 - 2 hr: 
+* Added killzones
+* Added title screen and control directions. Updated Itch.io
+* Started watching bracky's tutorial for last mechanic touches 
+
 ### 2024-11-03 - 1 hr: Added interaction choices, pushed to git
 * Everything works! Just need small adjustments on enemy and add world boundary
 * Pushed everything to github
