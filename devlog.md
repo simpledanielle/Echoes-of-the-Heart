@@ -5,6 +5,16 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-11-03 - 1 hr: Added interaction choices, pushed to git
+* Everything works! Just need small adjustments on enemy and add world boundary
+* Pushed everything to github
+* Changed direction to having the player make a choice to interact with items, then item dissappers 
+
+### 2024-11-01 - 3 hr: Failed to add emotion points, need to pivot
+* Can't get emotion points to show up. Think I want to switch to making it a dialogue options, already have the code for that
+* Went to github to get orginal code back. Everything I orginally had is back to working
+* Had an idea to add emotion points, tried for awhile, code got a little messed up
+
 ### 2024-10-29 - 2 hr 30 min: Enemy movement, updating git & trello
 * Created final door that accepts a code to open. Numbers display for player to see. This is how to beat the demo
 * Updated github, trello board tasks, and Itch.io
