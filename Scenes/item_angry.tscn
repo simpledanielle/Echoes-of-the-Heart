@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpd0u32l0m7hp"]
+[gd_scene load_steps=11 format=3 uid="uid://bpd0u32l0m7hp"]
 
 [ext_resource type="Script" path="res://Scripts/item.gd" id="1_7tcwv"]
 [ext_resource type="Texture2D" uid="uid://bs18shwxi5nef" path="res://Assets/Sprites/TilesetFloor.png" id="2_lt1l5"]
 [ext_resource type="Texture2D" uid="uid://818v4f3anki7" path="res://Assets/Sprites/TilesetDungeon.png" id="3_a8udh"]
 [ext_resource type="Texture2D" uid="uid://dnvvxbegh3icg" path="res://Assets/Sprites/Tileset_SpookyMansion_16x16_FREE.png" id="4_od6w1"]
+[ext_resource type="PackedScene" uid="uid://um3lkccym1mv" path="res://Scenes/interact_area.tscn" id="5_nd8te"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nn76s"]
 texture = ExtResource("2_lt1l5")
@@ -1061,6 +1062,37 @@ tile_set = SubResource("TileSet_rj004")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-8, -5)
 shape = SubResource("CircleShape2D_x8s28")
+
+[node name="Angry Dialogue" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -22.0
+offset_top = -16.0
+offset_right = 18.0
+offset_bottom = 24.0
+
+[node name="Dialogue" type="Label" parent="Angry Dialogue"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -18.0
+offset_right = 43.0
+offset_bottom = 5.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 9
+text = "test"
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="Angry Dialogue"]
+layout_direction = 2
+layout_mode = 0
+offset_left = -4.0
+offset_top = 28.0
+offset_right = 6.0
+offset_bottom = 38.0
+scale = Vector2(0.5, 0.5)
+
+[node name="InteractArea" parent="." instance=ExtResource("5_nd8te")]
+position = Vector2(-8, -5)
+scale = Vector2(-0.783365, -0.783365)
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
