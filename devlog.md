@@ -6,7 +6,8 @@
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
 ### 2024-11-12 - 3 hr 30 min hr: Polish with Maps and Enemy 
-* Fixed up enemy. It now moves and kills. Updated enemy sprite
+* Fixed up enemy. It now moves and kills. Used this tutorial: https://www.youtube.com/watch?v=tHrT4KoDZ_Y&ab_channel=SRCoder
+* Updated enemy sprite
 * puzzles continued to be refined
 * Continue updating map.  
 
