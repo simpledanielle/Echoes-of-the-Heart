@@ -5,8 +5,16 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-11-12 - 3 hr 30 min hr: Polish with Maps and Enemy 
+* Fixed up enemy. It now moves and kills. Updated enemy sprite
+* puzzles continued to be refined
+* Continue updating map.  
 
-### 2024-11-05 - 2 hr: 
+### 2024-11-06 - 1 hr: Polish: Updated maps 
+* Added more items and dialogue options in the first area
+* Fixed up first area map to allow for additional puzzle options
+
+### 2024-11-05 - 2 hr: Killzones, titlescreens, & tutorials
 * Added killzones
 * Added title screen and control directions. Updated Itch.io
 * Started watching bracky's tutorial for last mechanic touches 
