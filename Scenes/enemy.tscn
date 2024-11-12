@@ -1,40 +1,74 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwlwgs6tjq60b"]
+[gd_scene load_steps=11 format=3 uid="uid://bn2ouhdeeevqt"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_65f8y"]
-[ext_resource type="Texture2D" uid="uid://b8j5pk7evc8a7" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Monsters/FishRed/Faceset.png" id="2_arhb5"]
+[ext_resource type="Texture2D" uid="uid://dp26a668x012" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Monsters/Spirit/SpriteSheet.png" id="1_e7fsg"]
+[ext_resource type="PackedScene" uid="uid://d360pnfc5m5r4" path="res://Scenes/kill_zone.tscn" id="2_xv8ph"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vqx1p"]
-radius = 25.3333
+[sub_resource type="Curve2D" id="Curve2D_0ecd3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, -57, 0, 0, 0, 0, -1, 0)
+}
+point_count = 3
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q0lu"]
-size = Vector2(12, 12)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dip8"]
+atlas = ExtResource("1_e7fsg")
+region = Rect2(0, 0, 16, 16)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0mjb"]
+atlas = ExtResource("1_e7fsg")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oliq2"]
+atlas = ExtResource("1_e7fsg")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmkti"]
+atlas = ExtResource("1_e7fsg")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hyh8q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dip8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0mjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oliq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmkti")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10qxl"]
+radius = 8.0
+
+[node name="Sprit" type="Node2D"]
 script = ExtResource("1_65f8y")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3, 3)
-scale = Vector2(0.315789, 0.315789)
-texture = ExtResource("2_arhb5")
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_0ecd3")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-1, 0)
+rotation = -1.55334
+progress = 114.018
+rotates = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
-position = Vector2(-1.21593e-05, -6.19888e-06)
-shape = SubResource("CircleShape2D_vqx1p")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(0.0175412, 0.999846)
+rotation = 1.55325
+sprite_frames = SubResource("SpriteFrames_hyh8q")
+autoplay = "default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 3)
-shape = SubResource("RectangleShape2D_2q0lu")
+[node name="KillZone" parent="Path2D/PathFollow2D/AnimatedSprite2D" instance=ExtResource("2_xv8ph")]
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = 2.0
-offset_top = -18.0
-offset_right = 6.0
-offset_bottom = 9.0
-scale = Vector2(0.472821, 0.472821)
-max_value = 3.0
-value = 3.0
-
-[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_AttackRange_body_entered"]
-[connection signal="body_exited" from="Sprite2D/Area2D" to="." method="_on_AttackRange_body_exited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/AnimatedSprite2D/KillZone"]
+position = Vector2(-8.98319e-05, 1.00009)
+shape = SubResource("CircleShape2D_10qxl")

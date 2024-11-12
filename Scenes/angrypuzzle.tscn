@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dnvvxbegh3icg" path="res://Assets/Sprites/Tileset_SpookyMansion_16x16_FREE.png" id="1_d0322"]
 [ext_resource type="PackedScene" uid="uid://clglvhrm6yfa4" path="res://Scenes/Player2.tscn" id="2_42n3d"]
-[ext_resource type="PackedScene" uid="uid://dwlwgs6tjq60b" path="res://Scenes/enemy.tscn" id="3_3gh5y"]
+[ext_resource type="PackedScene" uid="uid://bn2ouhdeeevqt" path="res://Scenes/enemy.tscn" id="3_3gh5y"]
 [ext_resource type="PackedScene" uid="uid://drwbdhaljqecp" path="res://Scenes/winnerdoor.tscn" id="4_ph2ya"]
 [ext_resource type="PackedScene" uid="uid://d360pnfc5m5r4" path="res://Scenes/kill_zone.tscn" id="5_ol5b4"]
 
@@ -546,6 +546,12 @@ position = Vector2(573, 206)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_3gh5y")]
 position = Vector2(650, 185)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_3gh5y")]
+position = Vector2(460, 116)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("3_3gh5y")]
+position = Vector2(604, 70)
 
 [node name="winnerdoor" parent="." instance=ExtResource("4_ph2ya")]
 position = Vector2(392, -64)
