@@ -1,28 +1,38 @@
 extends CharacterBody2D
 
 var speed = 100  # speed in pixels/sec
+@onready var ray_cast_2D = $RayCast2D
+var can_move = true
 
+func _ready():
+	Global.player = self
 
 func _physics_process(_delta):
-	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * speed
+	if can_move:
+		var direction = Input.get_vector("left", "right", "up", "down")
+		velocity = direction * speed
 
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("interact"):
 		execute_interaction()
+	
+	if velocity != Vector2.ZERO:
+		ray_cast_2D.target_position = velocity.normalized() * 50
 
 @export var all_interactions = []
 @onready var interactLabel = $"Interaction Components/InteractLabel"
 
 
-func _ready():
-	update_interactions()
-	update_health_bar()
-	if attack_shape:
-		attack_shape.disabled = true  # Disable collision shape initially
-	else:
-		print("Error: CollisionShape2D not found. Check if it exists under AttackRange.")
+func _input(event):
+	if can_move:
+		if event.is_action_pressed("ui_interact"):
+			var target = ray_cast_2D.get_collider()
+			if target != null:
+				if target.is_in_group("NPC"):
+					print("I'm talking to an NPC!")
+					can_move = false
+					target.start_dialog()
 	
 #Interaction Stuff
 

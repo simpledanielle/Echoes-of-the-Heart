@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 InteractionManager="*res://Interaction/InteractionManager.tscn"
+Global="*res://Scripts/global.gd"
 
 [display]
 
