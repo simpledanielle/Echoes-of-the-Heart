@@ -5,6 +5,24 @@
 * [Other docs](todo)
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
+### 2024-11-19 - 2 hr: Started updating dialog system
+* Started to follow a tutorial to update my dialogues
+* Watched the youtube tutorial: https://www.youtube.com/watch?v=LTLYa9xUCqA&list=PL8VGDn5bxwDYrH2Nt4bEgu-txYm8MTKjD&index=9&ab_channel=OopsIDev%27d
+
+
+### 2024-11-18 - 3 hr: Started updating dialog system
+* Watched the youtube tutorial: https://www.youtube.com/watch?v=LTLYa9xUCqA&list=PL8VGDn5bxwDYrH2Nt4bEgu-txYm8MTKjD&index=9&ab_channel=OopsIDev%27d
+* Started to follow a tutorial to update my dialogues
+
+
+### 2024-11-18 - 4 hr  hr: Continued Polish with maps
+* Added physis in order to 
+* Updated enemy sprite
+* puzzles continued to be refined
+* Continue updating map.  
+
+
+
 ### 2024-11-12 - 3 hr 30 min hr: Polish with Maps and Enemy 
 * Fixed up enemy. It now moves and kills. Used this tutorial: https://www.youtube.com/watch?v=tHrT4KoDZ_Y&ab_channel=SRCoder
 * Updated enemy sprite
