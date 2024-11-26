@@ -157,12 +157,10 @@ radius = 14.0357
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_18vbv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
 sprite_frames = SubResource("SpriteFrames_682xa")
-animation = &"up"
+animation = &"left"
 autoplay = "up"
-frame = 1
-frame_progress = 0.415952
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kjoax")
@@ -213,7 +211,6 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.409988, 0.409988)
 theme_override_colors/font_color = Color(1, 0, 0.0117647, 1)
-text = "test"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -2,31 +2,31 @@ extends Area2D
 
 
 enum Emotion { CALM, ANGRY }
-@export var emotion_effect: Emotion = Emotion.CALM  # Set default emotion effect for the item
+@export var emotion_effect: Emotion = Emotion.ANGRY  # Set default emotion effect for the item
 
 var current_node = "start"
 var player_in_range = false
 var dialogue_visible = false
 var dialogue_tree = {
 	"start": {
-		"text": "This looks like a bottle of tea!",
+		"text": "Looks like blood. But maybe it isn't?",
 		"choices": [
 			{"text": "Drink it", "next": "drink_it"},
 			{"text": "Leave it", "next": "leave_it"}
 		]
 	},
 	"drink_it": {
-		"text": "You feel different after drinking the tea.",
+		"text": "You feel different after drinking the strange substance.",
 		"choices": []
 	},
 	"leave_it": {
-		"text": "You decided to leave the tea alone.",
+		"text": "You didn't want to get posioned.",
 		"choices": []
 	}
 }
 
-@onready var dialogue_label = $"Calm Dialogue/Dialogue"
-@onready var choice_container = $"Calm Dialogue/ChoiceContainer"
+@onready var dialogue_label = $"Angry Dialogue/Dialogue"
+@onready var choice_container = $"Angry Dialogue/ChoiceContainer"
 
 func _ready():
 	dialogue_label.visible = false

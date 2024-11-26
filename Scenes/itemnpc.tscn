@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvvcllajepfvf"]
+
+[ext_resource type="Script" path="res://Scripts/NewNPC2.gd" id="1_ksqp6"]
+[ext_resource type="Script" path="res://Resources/Dialog/Dialog.gd" id="2_a44gy"]
+[ext_resource type="Texture2D" uid="uid://b8qsd7sfq0ko3" path="res://Assets/Sprites/Ninja Adventure - Asset Pack/Ninja Adventure - Asset Pack/Actor/Characters/LionBoy/SpriteSheet.png" id="3_hn1b4"]
+[ext_resource type="PackedScene" uid="uid://b6xulxp84u7g7" path="res://Scenes/Dialog/dialog_manager.tscn" id="4_g2wut"]
+
+[sub_resource type="Resource" id="Resource_rq6cc"]
+script = ExtResource("2_a44gy")
+dialogs = {}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8s471"]
+radius = 8.06226
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["NPC"]]
+script = ExtResource("1_ksqp6")
+npc_id = "item_2"
+npc_name = "Lily"
+dialog_resource = SubResource("Resource_rq6cc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_hn1b4")
+hframes = 4
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_8s471")
+
+[node name="DialogManager" parent="." instance=ExtResource("4_g2wut")]

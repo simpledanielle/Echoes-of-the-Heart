@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbyjdqlq1pbr7"]
+
+[ext_resource type="Script" path="res://Scripts/items/item_manager.gd" id="1_j48uo"]
+[ext_resource type="PackedScene" uid="uid://b3sck3gvlmoa3" path="res://Scenes/Items/item_ui.tscn" id="2_034ki"]
+
+[node name="ItemManager" type="Node2D"]
+script = ExtResource("1_j48uo")
+
+[node name="ItemUI" parent="." instance=ExtResource("2_034ki")]

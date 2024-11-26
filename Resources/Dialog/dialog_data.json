@@ -87,7 +87,6 @@
 						"text": "Greetings, traveler! How can I assist you?",
 						"options": {
 							"Ask About Forest": "in_progress",
-							"Receive Quests": "give_quests",
 							"Say Goodbye": "exit"
 						}
 					},
@@ -120,6 +119,54 @@
 						"options": {
 							"Receive Quests": "give_quests",
 							"Say Goodbye": "exit"
+						}
+					},
+				]
+			},
+		],
+	},
+"npc_3": {
+		"trees": [
+			{
+				"branch_id": "npc_3_1",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "Welcome fellow prisoner! Hey I found this weird list?",
+						"options": {
+							"Ask About List": "in_progress",
+							"You don't have time for this": "exit"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "Looks like we need a code to open the door. All I found is this list: Flowers, Beds, Chairs, Skulls",
+						"options": {
+							"Say Goodbye": "end",
+							"Go Back": "start"
+						}
+					},
+					{
+						"state": "end",
+						"text": "See ya! Guess I'll just keep pressing numbers at the door",
+						"options": {}
+					},
+					{
+						"state": "exit",
+						"text": "Alright well screw you too!",
+						"options": {}
+					}
+				]
+			},
+			{
+				"branch_id": "npc_2_default",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "Man being stuck here got real boring. Maybe I should start counting things around to pass time...",
+						"options": {
+							"Say Goodbye": "exit",
+							"Ask About List": "in_progress"
 						}
 					},
 				]

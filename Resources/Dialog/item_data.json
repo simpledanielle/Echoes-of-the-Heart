@@ -1,0 +1,129 @@
+{
+	"item_1": {
+		"trees": [
+			{
+				"branch_id": "item_1_1",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "Hello, adventurer! What do you need?",
+						"options": {
+							"Ask About Town": "in_progress",
+							"Say Goodbye": "exit"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "This town is known for its beautiful gardens and not so friendly NPC's.",
+						"options": {
+							"Say Goodbye": "end",
+							"Go Back": "start"
+						}
+					},
+					{
+						"state": "end",
+						"text": "Goodbye, adventurer!",
+						"options": {}
+					},
+					{
+						"state": "exit",
+						"text": "Come back soon adventurer!",
+						"options": {}
+					}
+				]
+			},
+			{
+				"branch_id": "item_1_2",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "Hey adventurer! Back so soon?",
+						"options": {
+							"Continue Asking About Town": "in_progress",
+							"Say Goodbye": "exit"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "I heard that Carl over there makes a mean cat-eye soup.",
+						"options": {
+							"Say Goodbye": "end",
+							"Go Back": "start"
+						}
+					},
+					{
+						"state": "end",
+						"text": "Goodbye, adventurer!",
+						"options": {}
+					},
+					{
+						"state": "exit",
+						"text": "Come back soon!",
+						"options": {}
+					}
+				]
+			},
+			{
+				"branch_id": "item_1_default",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "Hey adventurer! Thanks again for helping me.",
+						"options": {
+							"Say Goodbye": "exit"
+						}
+					}
+				]
+			}
+		]
+	},
+	"item_2": {
+		"tree": [
+			{
+				"branch_id": "item_2_1",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "Greetings, traveler! How can I assist you?",
+						"options": {
+							"Ask About Forest": "in_progress",
+							"Receive Quests": "give_quests",
+							"Say Goodbye": "exit"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "The forest is home to many mystical creatures.",
+						"options": {
+							"Say Goodbye": "end",
+							"Go Back": "start"
+						}
+					},
+					{
+						"state": "end",
+						"text": "Farewell, traveler!",
+						"options": {}
+					},
+					{
+						"state": "exit",
+						"text": "Come back soon!",
+						"options": {}
+					}
+				]
+			},
+			{
+				"branch_id": "item_2_default",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "I wonder why Bobby is always smelling me...",
+						"options": {
+							"Receive Quests": "give_quests",
+							"Say Goodbye": "exit"
+						}
+					},
+				]
+			},
+		],
+	},
+}

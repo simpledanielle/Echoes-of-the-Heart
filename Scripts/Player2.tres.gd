@@ -4,13 +4,14 @@ var speed = 100  # speed in pixels/sec
 @onready var ray_cast_2D = $RayCast2D
 var can_move = true
 
+
+
 func _ready():
 	Global.player = self
 
 func _physics_process(_delta):
-	if can_move:
-		var direction = Input.get_vector("left", "right", "up", "down")
-		velocity = direction * speed
+	var direction = Input.get_vector("left", "right", "up", "down")
+	velocity = direction * speed
 
 	move_and_slide()
 	
@@ -31,7 +32,7 @@ func _input(event):
 			if target != null:
 				if target.is_in_group("NPC"):
 					print("I'm talking to an NPC!")
-					can_move = false
+					# set can_move to false
 					target.start_dialog()
 	
 #Interaction Stuff

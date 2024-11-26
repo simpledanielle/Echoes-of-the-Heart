@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bk6gmspupiar6"]
+[gd_scene load_steps=23 format=4 uid="uid://bk6gmspupiar6"]
 
 [ext_resource type="PackedScene" uid="uid://clglvhrm6yfa4" path="res://Scenes/Player2.tscn" id="5_k22nw"]
 [ext_resource type="Texture2D" uid="uid://818v4f3anki7" path="res://Assets/Sprites/TilesetDungeon.png" id="5_v17uj"]
@@ -8,10 +8,15 @@
 [ext_resource type="Script" path="res://Resources/Dialog/Dialog.gd" id="7_pm4vq"]
 [ext_resource type="PackedScene" uid="uid://duxqsipd418sl" path="res://Scenes/npc.tscn" id="8_jedsh"]
 [ext_resource type="PackedScene" uid="uid://dfns43daqbg5x" path="res://Scenes/door.tscn" id="8_pp7du"]
-[ext_resource type="PackedScene" uid="uid://ypjyk2ywwpuk" path="res://Scenes/item_calm.tscn" id="8_w07r4"]
 [ext_resource type="Texture2D" uid="uid://bs18shwxi5nef" path="res://Assets/Sprites/TilesetFloor.png" id="8_ys4h4"]
 [ext_resource type="PackedScene" uid="uid://bfa3je4tbxm3" path="res://Scenes/door_2.tscn" id="9_730l6"]
 [ext_resource type="PackedScene" uid="uid://bbtg37wbcgxqx" path="res://Scenes/invisiblewall.tscn" id="11_8xxot"]
+[ext_resource type="PackedScene" uid="uid://bdi1t106yo1aq" path="res://Scenes/Items/angryitem2.tscn" id="12_0q008"]
+[ext_resource type="Script" path="res://Scripts/item(calm).gd" id="12_c2lkq"]
+[ext_resource type="Script" path="res://Scripts/items/crystalblue.gd" id="13_4gikl"]
+[ext_resource type="PackedScene" uid="uid://c0enwdsw8r7dh" path="res://Scenes/Items/calmitem2.tscn" id="14_jm8p7"]
+[ext_resource type="Script" path="res://Scripts/items/crystalred.gd" id="15_kiyy7"]
+[ext_resource type="PackedScene" uid="uid://6ttimakus7e" path="res://Scenes/Items/angryitem3.tscn" id="17_xq52d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5yiw"]
 texture = ExtResource("8_ys4h4")
@@ -494,6 +499,7 @@ texture = ExtResource("5_v17uj")
 3:1/0 = 0
 4:1/0 = 0
 5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -503,6 +509,7 @@ texture = ExtResource("5_v17uj")
 6:2/0 = 0
 7:2/0 = 0
 0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
@@ -758,6 +765,7 @@ texture = ExtResource("6_msi0u")
 8:12/0 = 0
 9:12/0 = 0
 10:12/0 = 0
+10:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:12/0 = 0
 12:12/0 = 0
 13:12/0 = 0
@@ -774,6 +782,7 @@ texture = ExtResource("6_msi0u")
 4:13/0 = 0
 5:13/0 = 0
 6:13/0 = 0
+6:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:13/0 = 0
 8:13/0 = 0
 9:13/0 = 0
@@ -816,6 +825,7 @@ texture = ExtResource("6_msi0u")
 9:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:15/0 = 0
 11:15/0 = 0
+11:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:15/0 = 0
 13:15/0 = 0
 14:15/0 = 0
@@ -1002,10 +1012,15 @@ texture = ExtResource("6_msi0u")
 18:24/0 = 0
 19:24/0 = 0
 0:25/0 = 0
+0:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:25/0 = 0
+1:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:25/0 = 0
+2:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:25/0 = 0
+3:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:25/0 = 0
+4:25/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:25/0 = 0
 6:25/0 = 0
 7:25/0 = 0
@@ -1022,7 +1037,9 @@ texture = ExtResource("6_msi0u")
 18:25/0 = 0
 19:25/0 = 0
 3:26/0 = 0
+3:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:26/0 = 0
+4:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:26/0 = 0
 6:26/0 = 0
 7:26/0 = 0
@@ -1031,7 +1048,9 @@ texture = ExtResource("6_msi0u")
 10:26/0 = 0
 11:26/0 = 0
 12:26/0 = 0
+12:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:26/0 = 0
+13:26/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:26/0 = 0
 15:26/0 = 0
 16:26/0 = 0
@@ -1044,12 +1063,14 @@ texture = ExtResource("6_msi0u")
 5:28/0 = 0
 6:28/0 = 0
 7:28/0 = 0
+7:28/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:28/0 = 0
 9:28/0 = 0
 10:28/0 = 0
 5:29/0 = 0
 6:29/0 = 0
 7:29/0 = 0
+7:29/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:29/0 = 0
 9:29/0 = 0
 10:29/0 = 0
@@ -1073,34 +1094,20 @@ tile_set = SubResource("TileSet_bn63c")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 position = Vector2(638, 108)
-tile_map_data = PackedByteArray("AADZ/wkAAgAGAA0AAADZ/wgAAgAGAA0AAAACAAMAAgAGAA0AAAD3/wEAAgALAA8AAAA=")
+tile_map_data = PackedByteArray("AADZ/wkAAgAGAA0AAADZ/wgAAgAGAA0AAAACAAMAAgAGAA0AAAD3/wEAAgALAA8AAAADAAAAAQAFAAEAAADs////AQAFAAEAAAD+/wsAAQAFAAEAAAD9/wsAAQABAAMAAADu/wIAAQAAAAMAAAD4//7/AQACAAIAAAD8//7/AQACAAIAAAAEAAIAAQACAAIAAAACAAgAAQACAAIAAAD7/wwAAQACAAIAAAD3/wwAAQACAAIAAADy/wgAAQACAAIAAADt/wQAAQACAAIAAADr//3/AQACAAIAAADv//r/AQACAAIAAAAAAPz/AQACAAIAAAAEAPz/AQACAAIAAAD5/wEAAgAEABEAAAD6/wEAAgAEABEAAAD8/wEAAgAEABEAAAD+/wEAAgALAA8AAAD///3/AgAIABYAAAD///7/AgAIABcAAAD0//3/AgAIABYAAAD0//7/AgAIABcAAADv//z/AgAFABgAAADu//z/AgAFABgAAADu//v/AgAFABgAAADv//v/AgAFABgAAAD2//7/AgAHABwAAAD2////AgAHAB0AAAD9//7/AgAHABwAAAD9////AgAHAB0AAAADAAYAAgAGAA0AAADu/wQAAgAGAA0AAAD5/wUAAgAMABoAAAD5/wQAAgANABoAAAD4/wUAAgANABoAAAD5/wYAAgANABoAAAD6/wUAAgANABoAAADx//7/AgAMABoAAAAAAAoAAgAMABoAAAA=")
 tile_set = SubResource("TileSet_bn63c")
 
 [node name="Player" parent="." instance=ExtResource("5_k22nw")]
 position = Vector2(535, 380)
 
-[node name="Area2D" parent="." instance=ExtResource("7_1mata")]
-position = Vector2(553, 189)
-
 [node name="NPC" parent="." instance=ExtResource("8_jedsh")]
-position = Vector2(466, 189)
+position = Vector2(537, 256)
 
 [node name="NPC 2" parent="." instance=ExtResource("8_jedsh")]
-position = Vector2(400, 139)
+position = Vector2(679, 183)
 npc_id = "npc_2"
 npc_name = "Cactus"
 dialog_resource = SubResource("Resource_dltqj")
-
-[node name="InteractionAreas" type="Node2D" parent="."]
-
-[node name="InteractArea2" parent="InteractionAreas" instance=ExtResource("6_daqm5")]
-position = Vector2(546, 184)
-
-[node name="Area2D" parent="InteractionAreas" instance=ExtResource("8_w07r4")]
-position = Vector2(583, 244)
-
-[node name="InteractArea" parent="InteractionAreas" instance=ExtResource("6_daqm5")]
-position = Vector2(575, 239)
 
 [node name="Door" parent="." instance=ExtResource("8_pp7du")]
 position = Vector2(537, 112)
@@ -1130,4 +1137,23 @@ rotation = -1.57408
 position = Vector2(255, 341)
 rotation = -1.57408
 
-[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[node name="Items" type="Node" parent="."]
+
+[node name="Angry" parent="Items" instance=ExtResource("7_1mata")]
+position = Vector2(425, 209)
+
+[node name="Calm" parent="Items" instance=ExtResource("7_1mata")]
+position = Vector2(630, 243)
+script = ExtResource("12_c2lkq")
+emotion_effect = 0
+
+[node name="angry2" parent="Items" instance=ExtResource("12_0q008")]
+position = Vector2(463, 135)
+script = ExtResource("13_4gikl")
+
+[node name="calm2" parent="Items" instance=ExtResource("14_jm8p7")]
+position = Vector2(371, 90)
+script = ExtResource("15_kiyy7")
+
+[node name="angry3" parent="Items" instance=ExtResource("17_xq52d")]
+position = Vector2(649, 123)
