@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 InteractionManager="*res://Interaction/InteractionManager.tscn"
 Global="*res://Scripts/global.gd"
+Audioplayer="*res://Scenes/audioplayer.tscn"
 
 [display]
 

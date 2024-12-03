@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=4 uid="uid://bk6gmspupiar6"]
+[gd_scene load_steps=24 format=4 uid="uid://bk6gmspupiar6"]
 
+[ext_resource type="Script" path="res://Scenes/game.gd" id="1_hxar1"]
 [ext_resource type="PackedScene" uid="uid://clglvhrm6yfa4" path="res://Scenes/Player2.tscn" id="5_k22nw"]
 [ext_resource type="Texture2D" uid="uid://818v4f3anki7" path="res://Assets/Sprites/TilesetDungeon.png" id="5_v17uj"]
 [ext_resource type="PackedScene" uid="uid://um3lkccym1mv" path="res://Scenes/interact_area.tscn" id="6_daqm5"]
@@ -1086,6 +1087,7 @@ script = ExtResource("7_pm4vq")
 dialogs = {}
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_hxar1")
 metadata/_edit_vertical_guides_ = [485.0]
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
@@ -1094,7 +1096,7 @@ tile_set = SubResource("TileSet_bn63c")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 position = Vector2(638, 108)
-tile_map_data = PackedByteArray("AADZ/wkAAgAGAA0AAADZ/wgAAgAGAA0AAAACAAMAAgAGAA0AAAD3/wEAAgALAA8AAAADAAAAAQAFAAEAAADs////AQAFAAEAAAD+/wsAAQAFAAEAAAD9/wsAAQABAAMAAADu/wIAAQAAAAMAAAD4//7/AQACAAIAAAD8//7/AQACAAIAAAAEAAIAAQACAAIAAAACAAgAAQACAAIAAAD7/wwAAQACAAIAAAD3/wwAAQACAAIAAADy/wgAAQACAAIAAADt/wQAAQACAAIAAADr//3/AQACAAIAAADv//r/AQACAAIAAAAAAPz/AQACAAIAAAAEAPz/AQACAAIAAAD5/wEAAgAEABEAAAD6/wEAAgAEABEAAAD8/wEAAgAEABEAAAD+/wEAAgALAA8AAAD///3/AgAIABYAAAD///7/AgAIABcAAAD0//3/AgAIABYAAAD0//7/AgAIABcAAADv//z/AgAFABgAAADu//z/AgAFABgAAADu//v/AgAFABgAAADv//v/AgAFABgAAAD2//7/AgAHABwAAAD2////AgAHAB0AAAD9//7/AgAHABwAAAD9////AgAHAB0AAAADAAYAAgAGAA0AAADu/wQAAgAGAA0AAAD5/wUAAgAMABoAAAD5/wQAAgANABoAAAD4/wUAAgANABoAAAD5/wYAAgANABoAAAD6/wUAAgANABoAAADx//7/AgAMABoAAAAAAAoAAgAMABoAAAA=")
+tile_map_data = PackedByteArray("AADZ/wkAAgAGAA0AAADZ/wgAAgAGAA0AAAACAAMAAgAGAA0AAAD3/wEAAgALAA8AAAADAAAAAQAFAAEAAADs////AQAFAAEAAAD+/wsAAQAFAAEAAAD9/wsAAQABAAMAAADu/wIAAQAAAAMAAAD4//7/AQACAAIAAAD8//7/AQACAAIAAAAEAAIAAQACAAIAAAACAAgAAQACAAIAAAD7/wwAAQACAAIAAAD3/wwAAQACAAIAAADy/wgAAQACAAIAAADt/wQAAQACAAIAAADr//3/AQACAAIAAADv//r/AQACAAIAAAAAAPz/AQACAAIAAAAEAPz/AQACAAIAAAD+/wEAAgALAA8AAAD///3/AgAIABYAAAD///7/AgAIABcAAAD0//3/AgAIABYAAAD0//7/AgAIABcAAADv//z/AgAFABgAAADu//z/AgAFABgAAADu//v/AgAFABgAAADv//v/AgAFABgAAAD2//7/AgAHABwAAAD2////AgAHAB0AAAD9//7/AgAHABwAAAD9////AgAHAB0AAAADAAYAAgAGAA0AAADu/wQAAgAGAA0AAAD5/wUAAgAMABoAAAD5/wQAAgANABoAAAD4/wUAAgANABoAAAD5/wYAAgANABoAAAD6/wUAAgANABoAAADx//7/AgAMABoAAAAAAAoAAgAMABoAAAD4/wEAAgACABEAAAD5/wEAAgADABEAAAD7/wAAAgACABAAAAD7/wEAAgACABEAAAD8/wAAAgADABAAAAD8/wEAAgADABEAAAD4/wAAAgACABAAAAD5/wAAAgADABAAAAA=")
 tile_set = SubResource("TileSet_bn63c")
 
 [node name="Player" parent="." instance=ExtResource("5_k22nw")]
@@ -1110,16 +1112,16 @@ npc_name = "Cactus"
 dialog_resource = SubResource("Resource_dltqj")
 
 [node name="Door" parent="." instance=ExtResource("8_pp7du")]
-position = Vector2(537, 112)
+position = Vector2(521, 112)
 
 [node name="door2" parent="." instance=ExtResource("9_730l6")]
-position = Vector2(417, 27)
+position = Vector2(407, 26)
 
 [node name="InteractArea" parent="." instance=ExtResource("6_daqm5")]
-position = Vector2(541, 130)
+position = Vector2(525, 131)
 
 [node name="InteractArea2" parent="." instance=ExtResource("6_daqm5")]
-position = Vector2(583, 133)
+position = Vector2(573, 132)
 
 [node name="Invisible walls" type="Node" parent="."]
 

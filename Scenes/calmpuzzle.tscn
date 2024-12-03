@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjny5mx18cg0r"]
+[gd_scene load_steps=6 format=3 uid="uid://cjny5mx18cg0r"]
 
+[ext_resource type="Script" path="res://Scenes/calmpuzzle.gd" id="1_6pr11"]
+[ext_resource type="Texture2D" uid="uid://cwwr7kyewnyoh" path="res://Assets/swamp-8521293_1920.jpg" id="1_ll5rs"]
 [ext_resource type="Texture2D" uid="uid://dnvvxbegh3icg" path="res://Assets/Sprites/Tileset_SpookyMansion_16x16_FREE.png" id="1_r4m4j"]
-[ext_resource type="PackedScene" uid="uid://clglvhrm6yfa4" path="res://Scenes/Player2.tscn" id="2_ck71j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gh4lk"]
 texture = ExtResource("1_r4m4j")
@@ -529,18 +530,32 @@ terrain_set_0/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_gh4lk")
 
 [node name="Calm" type="Node2D"]
+script = ExtResource("1_6pr11")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(585, 856)
+scale = Vector2(0.909491, 0.909491)
+texture = ExtResource("1_ll5rs")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+visible = false
 position = Vector2(566, 277)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 15, 0, 11, 0, 0, 0, 0, 0, 255, 255, 0, 0, 15, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 17, 0, 0, 0, 253, 255, 254, 255, 0, 0, 5, 0, 24, 0, 0, 0, 3, 0, 254, 255, 0, 0, 5, 0, 24, 0, 0, 0)
 tile_set = SubResource("TileSet_hbesu")
 
-[node name="Player" parent="." instance=ExtResource("2_ck71j")]
-position = Vector2(573, 237)
-
 [node name="Label" type="Label" parent="."]
-offset_left = 490.0
-offset_top = 150.0
-offset_right = 655.0
-offset_bottom = 173.0
+offset_left = 358.0
+offset_top = 291.0
+offset_right = 800.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 43
 text = "House Level Passed!!!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 439.0
+offset_top = 362.0
+offset_right = 715.505
+offset_bottom = 450.0
+text = "Restart"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

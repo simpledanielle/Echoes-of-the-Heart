@@ -86,7 +86,7 @@ func _on_choice_selected(next_node):
 	current_node = next_node
 	if current_node == "hit_it":
 		apply_emotion()  # Set emotion and remove item after interaction
-	elif current_node == "yell_at_it":
+	elif current_node == "admire_it":
 		hide_dialogue()  # Hide dialogue if player chooses to leave
 	else:
 		show_dialogue()
