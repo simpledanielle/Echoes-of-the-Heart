@@ -6,6 +6,13 @@
 * [Itch.io] (https://simplydanielle.itch.io/echoes-of-the-heart)
 
 
+### 2024-12-03 - 4 hr: Finished with Polish
+* Additional dialogue touches
+* Added Music
+* Added Restart button
+* Fixed issue where all item dialogues were appearing at once 
+* Added backgrounds for title screen and end screen
+
 ### 2024-11-25 - 2 hr: Continued Polish with the map
 * Decorating map and designing enviornment 
 
