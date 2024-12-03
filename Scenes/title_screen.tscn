@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dklh431erxuta"]
+[gd_scene load_steps=4 format=3 uid="uid://dklh431erxuta"]
 
 [ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_0adoa"]
 [ext_resource type="Texture2D" uid="uid://dq2g01711ghrk" path="res://Assets/door-8307616_1920.jpg" id="2_h5xop"]
+[ext_resource type="FontFile" uid="uid://bdc8mf48yh5kl" path="res://Assets/KiriFont/KiriFont.ttf" id="3_qscmt"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -22,17 +23,19 @@ offset_left = 439.0
 offset_top = 362.0
 offset_right = 715.505
 offset_bottom = 450.0
+theme_override_font_sizes/font_size = 27
 text = "Start"
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 120.0
-offset_top = 188.0
-offset_right = 337.0
-offset_bottom = 220.0
+offset_left = 150.0
+offset_top = 217.0
+offset_right = 472.0
+offset_bottom = 249.0
 scale = Vector2(4.04, 4.04)
-theme_override_font_sizes/font_size = 23
+theme_override_fonts/font = ExtResource("3_qscmt")
+theme_override_font_sizes/font_size = 15
 text = "Echoes of the Heart"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

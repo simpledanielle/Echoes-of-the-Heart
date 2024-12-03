@@ -171,10 +171,11 @@ zoom = Vector2(3, 3)
 [node name="UI" type="Node2D" parent="Camera2D"]
 
 [node name="EmotionLabel" type="Label" parent="Camera2D/UI"]
-offset_left = -191.0
+offset_left = -188.0
 offset_top = -108.0
-offset_right = -151.0
+offset_right = -148.0
 offset_bottom = -85.0
+theme_override_font_sizes/font_size = 19
 
 [node name="Label" type="Label" parent="Camera2D/UI"]
 offset_left = -191.0
@@ -184,6 +185,7 @@ offset_bottom = 143.0
 scale = Vector2(0.520001, 0.520001)
 text = "Press [E] to Interact with objects
 Use Arrow Keys to Move
+Use Mouse to Make Choices
 "
 
 [node name="Interaction Components" type="Node2D" parent="."]

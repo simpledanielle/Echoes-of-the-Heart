@@ -1057,7 +1057,6 @@ radius = 8.06226
 [node name="calm2" type="Area2D"]
 position = Vector2(1, -2)
 script = ExtResource("1_qofb1")
-emotion_effect = 0
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(18, 2)
@@ -1078,10 +1077,10 @@ offset_bottom = 24.0
 
 [node name="Dialogue" type="Label" parent="Angry Dialogue"]
 layout_mode = 0
-offset_left = -7.0
-offset_top = -13.0
-offset_right = 33.0
-offset_bottom = 10.0
+offset_left = -26.0
+offset_top = -12.0
+offset_right = 14.0
+offset_bottom = 11.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 9
 text = "test"

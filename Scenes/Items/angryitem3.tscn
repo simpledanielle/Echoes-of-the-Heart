@@ -1077,9 +1077,9 @@ offset_bottom = 24.0
 
 [node name="Dialogue" type="Label" parent="Angry Dialogue"]
 layout_mode = 0
-offset_left = -13.0
+offset_left = -23.0
 offset_top = -22.0
-offset_right = 27.0
+offset_right = 17.0
 offset_bottom = 1.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 9

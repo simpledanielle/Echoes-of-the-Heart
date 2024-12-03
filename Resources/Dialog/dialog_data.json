@@ -6,15 +6,15 @@
 				"dialogs": [
 					{
 						"state": "start",
-						"text": "Hello, adventurer! What do you need?",
+						"text": "What do you want?",
 						"options": {
-							"Ask About Town": "in_progress",
+							"What is this place": "in_progress",
 							"Say Goodbye": "exit"
 						}
 					},
 					{
 						"state": "in_progress",
-						"text": "This town is known for its beautiful gardens and not so friendly NPC's.",
+						"text": "Better you don't know. It will be less painful",
 						"options": {
 							"Say Goodbye": "end",
 							"Go Back": "start"
@@ -22,12 +22,12 @@
 					},
 					{
 						"state": "end",
-						"text": "Goodbye, adventurer!",
+						"text": "No use in saying that",
 						"options": {}
 					},
 					{
 						"state": "exit",
-						"text": "Come back soon adventurer!",
+						"text": "Good luck out there",
 						"options": {}
 					}
 				]
@@ -37,15 +37,15 @@
 				"dialogs": [
 					{
 						"state": "start",
-						"text": "Hey adventurer! Back so soon?",
+						"text": "Hey. You still alive?",
 						"options": {
-							"Continue Asking About Town": "in_progress",
+							"Ask about this place": "in_progress",
 							"Say Goodbye": "exit"
 						}
 					},
 					{
 						"state": "in_progress",
-						"text": "I heard that Carl over there makes a mean cat-eye soup.",
+						"text": "Look kid. It's best you don't know. Iris is always listening",
 						"options": {
 							"Say Goodbye": "end",
 							"Go Back": "start"
@@ -53,12 +53,12 @@
 					},
 					{
 						"state": "end",
-						"text": "Goodbye, adventurer!",
+						"text": "May you rest in peace",
 						"options": {}
 					},
 					{
 						"state": "exit",
-						"text": "Come back soon!",
+						"text": "Better to stay ignorant",
 						"options": {}
 					}
 				]
@@ -68,7 +68,7 @@
 				"dialogs": [
 					{
 						"state": "start",
-						"text": "Hey adventurer! Thanks again for helping me.",
+						"text": "No more questions. Leave me alone",
 						"options": {
 							"Say Goodbye": "exit"
 						}
@@ -84,15 +84,15 @@
 				"dialogs": [
 					{
 						"state": "start",
-						"text": "Greetings, traveler! How can I assist you?",
+						"text": "What are you looking at?",
 						"options": {
-							"Ask About Forest": "in_progress",
-							"Say Goodbye": "exit"
+							"Don't be rude": "in_progress",
+							"Leave": "exit"
 						}
 					},
 					{
 						"state": "in_progress",
-						"text": "The forest is home to many mystical creatures.",
+						"text": "Oh who cares. We are all going to die anyway. Might as well have some fun",
 						"options": {
 							"Say Goodbye": "end",
 							"Go Back": "start"
@@ -100,12 +100,12 @@
 					},
 					{
 						"state": "end",
-						"text": "Farewell, traveler!",
+						"text": "Yeah, piss off",
 						"options": {}
 					},
 					{
 						"state": "exit",
-						"text": "Come back soon!",
+						"text": "Don't come back!",
 						"options": {}
 					}
 				]
@@ -117,7 +117,6 @@
 						"state": "start",
 						"text": "I wonder why Bobby is always smelling me...",
 						"options": {
-							"Receive Quests": "give_quests",
 							"Say Goodbye": "exit"
 						}
 					},
@@ -165,12 +164,76 @@
 						"state": "start",
 						"text": "Man being stuck here got real boring. Maybe I should start counting things around to pass time...",
 						"options": {
-							"Say Goodbye": "exit",
-							"Ask About List": "in_progress"
 						}
 					},
 				]
 			},
 		],
+	},
+"npc_4": {
+		"trees": [
+			{
+				"branch_id": "npc_4_1",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "You see someone on the ground",
+						"options": {
+							"Are you Ok?": "in_progress",
+							"Ignore him": "exit"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "Do I look ok? I figured out the code, but my life force is so drained I can't move!",
+						"options": {
+							"Say Goodbye": "end",
+							"Go Back": "start"
+						}
+					},
+					{
+						"state": "end",
+						"text": "No use in saying that",
+						"options": {}
+					},
+					{
+						"state": "exit",
+						"text": "Thanks for making my last moments so miseable",
+						"options": {}
+					}
+				]
+			},
+			{
+				"branch_id": "npc__2",
+				"dialogs": [
+					{
+						"state": "start",
+						"text": "What? This isn't a show!",
+						"options": {
+							"What's the code?": "in_progress",
+							"Leave him alone": "exit"
+						}
+					},
+					{
+						"state": "in_progress",
+						"text": "Well guess I should pass it to someone. Its 1234.",
+						"options": {
+							"Say Goodbye": "end",
+							"Go Back": "start"
+						}
+					},
+					{
+						"state": "end",
+						"text": "Hope someone makes it out",
+						"options": {}
+					},
+					{
+						"state": "exit",
+						"text": "Can't believe this!",
+						"options": {}
+					}
+				]
+			},
+		]
 	},
 }

@@ -1,11 +1,11 @@
 extends Area2D
 
-
 enum Emotion { CALM, ANGRY }
 @export var emotion_effect: Emotion = Emotion.ANGRY  # Set default emotion effect for the item
 
 var current_node = "start"
 var player_in_range = false
+var interacting_item = null
 var dialogue_visible = false
 var dialogue_tree = {
 	"start": {
@@ -20,7 +20,7 @@ var dialogue_tree = {
 		"choices": []
 	},
 	"leave_it": {
-		"text": "You didn't want to get posioned.",
+		"text": "You didn't want to get poisoned.",
 		"choices": []
 	}
 }
@@ -36,22 +36,26 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
-		print ("Player in range of NPC. Press [E]")
+		interacting_item = self  # Set this item as the active interacting item
+		print("Player in range of NPC. Press [E]")
 
 # Detect if player exits interaction range
-func _on_Area2D_exited(body):
+func _on_Area2D_body_exited(body):
 	if body.is_in_group("player"):
 		player_in_range = false
+		if interacting_item == self:
+			interacting_item = null  # Clear the active interacting item
 		hide_dialogue()
 		print("Player left the range of NPC")
 
 # Toggle dialogue with interaction
 func _process(delta):
 	if player_in_range and Input.is_action_just_pressed("ui_interact"):
-		if dialogue_visible:
-			hide_dialogue()
-		else:
-			show_dialogue()
+		if interacting_item == self:  # Ensure interaction is with the correct item
+			if dialogue_visible:
+				hide_dialogue()
+			else:
+				show_dialogue()
 
 # Show dialogue text and choices
 func show_dialogue():

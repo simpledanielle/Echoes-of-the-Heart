@@ -1073,9 +1073,9 @@ offset_bottom = 24.0
 
 [node name="Dialogue" type="Label" parent="Angry Dialogue"]
 layout_mode = 0
-offset_left = 3.0
+offset_left = -48.0
 offset_top = -18.0
-offset_right = 43.0
+offset_right = -8.0
 offset_bottom = 5.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 9
@@ -1096,3 +1096,5 @@ scale = Vector2(-0.783365, -0.783365)
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_Area2D_exited"]

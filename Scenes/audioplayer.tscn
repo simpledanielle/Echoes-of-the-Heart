@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwy7vtc2xyio6"]
 
-[ext_resource type="AudioStream" uid="uid://cagfay78g56f7" path="res://Scenes/game-music-loop-2-144037.mp3" id="1_gwked"]
+[ext_resource type="AudioStream" uid="uid://cjwuws3ns6pq3" path="res://Assets/Ost_loop.mp3" id="1_wn51v"]
 [ext_resource type="Script" path="res://Scripts/audioplayer.gd" id="2_oabow"]
 
 [node name="Audioplayer" type="AudioStreamPlayer2D"]
-stream = ExtResource("1_gwked")
+stream = ExtResource("1_wn51v")
 volume_db = 5.0
 autoplay = true
 script = ExtResource("2_oabow")
